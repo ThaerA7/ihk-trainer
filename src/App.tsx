@@ -1,18 +1,12 @@
-import { Route, Routes, NavLink } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Practice from './pages/Practice';
+import Header from './components/Header';
 
 export default function App() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
-      <nav className="border-b bg-white">
-        <div className="mx-auto max-w-5xl px-4 py-3 flex gap-4">
-          <NavLink to="/" className="font-semibold">IHK Trainer</NavLink>
-          <NavLink to="/practice" className={({isActive}) => isActive ? 'underline' : ''}>
-            Practice
-          </NavLink>
-        </div>
-      </nav>
+      <Header />
 
       <main className="mx-auto max-w-5xl px-4 py-8">
         <Routes>
