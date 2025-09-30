@@ -1,3 +1,4 @@
+// Sidebar.tsx
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useSearch } from '../store/useSearch';
 import { useCallback, useEffect } from 'react';
@@ -36,9 +37,9 @@ export default function Sidebar() {
   return (
     <aside
       className={[
-        'relative min-h-screen border-r border-white/10 text-white',
-        // charcoal + cool gradient
+        'relative min-h-screen text-white',
         'bg-gradient-to-b from-zinc-950 via-slate-900 to-neutral-950',
+        'border-r border-white/15',
         'transition-all duration-300 ease-in-out',
         collapsed ? 'w-8' : 'w-64 sm:w-72',
       ].join(' ')}
@@ -52,7 +53,7 @@ export default function Sidebar() {
         className={[
           'absolute z-10 grid place-items-center rounded-full border border-white/20 bg-white/10 backdrop-blur',
           'transition hover:bg-white/20',
-          collapsed ? 'inset-y-0 my-auto right-1 h-6 w-6' : '-right-3 top-5 h-7 w-7',
+          collapsed ? 'inset-y-0 my-auto right-1 h-6 w-6' : 'right-3 top-3 h-9 w-9',
         ].join(' ')}
       >
         {collapsed ? <Chevron dir="right" /> : <Chevron dir="left" />}
