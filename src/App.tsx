@@ -7,11 +7,11 @@ import Placeholder from './pages/Placeholder.tsx';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 grid grid-rows-[auto_1fr]">
-      {/* 30% / 70% responsive grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-[20%_80%]">
+    <div className="min-h-screen bg-gray-50 text-gray-900">
+      {/* Let the sidebar width drive the layout */}
+      <div className="grid min-h-screen grid-cols-[auto_1fr]">
         <Sidebar />
-        <main className="min-h-screen px-4 py-6 sm:px-8">
+        <main className="px-4 py-6 sm:px-8">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/practice" element={<Practice />} />
