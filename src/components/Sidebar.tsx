@@ -38,7 +38,7 @@ export default function Sidebar() {
     <aside
       className={[
         'relative min-h-screen text-white',
-        'bg-gradient-to-b from-zinc-950 via-slate-900 to-neutral-950',
+        'bg-zinc-950',
         'border-r border-white/15',
         'transition-all duration-300 ease-in-out',
         collapsed ? 'w-8' : 'w-64 sm:w-72',
