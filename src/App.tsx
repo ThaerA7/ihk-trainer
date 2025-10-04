@@ -2,6 +2,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import TopBar from './components/TopBar';
+import ChatSidebar from './components/ChatSidebar';
 import Home from './pages/Home';
 import Practice from './pages/Practice';
 import Subjects from './pages/Subjects';
@@ -10,19 +11,19 @@ import Placeholder from './pages/Placeholder';
 export default function App() {
   return (
     <div className="min-h-screen text-white bg-zinc-900">
-      {/* Two columns (sidebar | main), two rows (topbar | content) */}
-      <div className="grid min-h-screen grid-cols-[auto_1fr] grid-rows-[auto_1fr]">
-        {/* Sidebar spans the full height */}
+      {/* Three columns (left | main | right), two rows (topbar | content) */}
+      <div className="grid min-h-screen grid-cols-[auto_1fr_auto] grid-rows-[auto_1fr]">
+        {/* Left sidebar spans full height */}
         <div className="row-span-2">
           <Sidebar />
         </div>
 
-        {/* Top bar: same gradient as sidebar, edge-to-edge in the main column */}
+        {/* TopBar only in the middle column so it touches both sidebars */}
         <div className="col-start-2 row-start-1">
           <TopBar />
         </div>
 
-        {/* Main content area */}
+        {/* Main content */}
         <main className="col-start-2 row-start-2 px-4 py-6 sm:px-8">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -34,6 +35,11 @@ export default function App() {
             <Route path="/placeholder-6" element={<Placeholder title="Placeholder 6" />} />
           </Routes>
         </main>
+
+        {/* Right chat sidebar now spans full height */}
+        <div className="col-start-3 row-start-1 row-span-2">
+          <ChatSidebar />
+        </div>
       </div>
     </div>
   );
