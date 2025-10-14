@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Practice from './pages/Practice';
 import Subjects from './pages/Subjects';
 import Placeholder from './pages/Placeholder';
+import InformationUndGrundbegriffe from './pages/it-grundlagen/InformationUndGrundbegriffe.tsx';
 
 export default function App() {
   return (
@@ -29,10 +30,36 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/practice" element={<Practice />} />
             <Route path="/subjects" element={<Subjects />} />
-            <Route path="/placeholder-3" element={<Placeholder title="Placeholder 3" />} />
-            <Route path="/placeholder-4" element={<Placeholder title="Placeholder 4" />} />
-            <Route path="/placeholder-5" element={<Placeholder title="Placeholder 5" />} />
-            <Route path="/placeholder-6" element={<Placeholder title="Placeholder 6" />} />
+
+            {/* NEW: catch-all placeholders for the two large sections */}
+            <Route
+              path="/it-grundlagen/information-und-grundbegriffe"
+              element={<InformationUndGrundbegriffe />}
+            />
+
+            <Route
+              path="/netzwerke/*"
+              element={
+                <Placeholder title="Netzwerke und Internettechnologien" />
+              }
+            />
+
+            <Route
+              path="/placeholder-3"
+              element={<Placeholder title="Placeholder 3" />}
+            />
+            <Route
+              path="/placeholder-4"
+              element={<Placeholder title="Placeholder 4" />}
+            />
+            <Route
+              path="/placeholder-5"
+              element={<Placeholder title="Placeholder 5" />}
+            />
+            <Route
+              path="/placeholder-6"
+              element={<Placeholder title="Placeholder 6" />}
+            />
           </Routes>
         </main>
 

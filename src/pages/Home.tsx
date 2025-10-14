@@ -3,7 +3,9 @@ export default function Home() {
   return (
     <section className="space-y-2">
       <h1 className="text-3xl font-bold">Willkommen 👋</h1>
-      <p className="text-white/90">Baue deine IHK-Prüfungsvorbereitung auf echten Übungsaufgaben auf.</p>
+      <p className="text-white/90">
+        Baue deine IHK-Prüfungsvorbereitung auf echten Übungsaufgaben auf.
+      </p>
       <ul className="list-disc pl-6 text-white/80">
         <li>Adaptives Training (schwere Themen öfter)</li>
         <li>Prüfungsmodus mit Timer</li>
