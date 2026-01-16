@@ -468,18 +468,21 @@ import { Ripple } from './models/ripple.model';
       border-radius: 40px;
       padding: 0;
       overflow: hidden;
-      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
       cursor: pointer;
       height: 320px;
       box-shadow: 
         0 12px 24px rgba(0, 0, 0, 0.25), 
         0 6px 12px rgba(0, 0, 0, 0.15),
-        inset 0 0 0 4px rgba(255, 255, 255, 0.4);
+        inset 0 0 0 4px rgba(255, 255, 255, 0.9);
       pointer-events: auto;
+      will-change: transform, box-shadow;
+      backface-visibility: hidden;
+      -webkit-font-smoothing: subpixel-antialiased;
     }
 
     .feature-card:hover {
-      transform: translateY(-16px) scale(1.03) rotate(1deg);
+      transform: translateY(-12px);
       box-shadow: 
         0 28px 56px rgba(0, 0, 0, 0.4), 
         0 8px 16px rgba(0, 0, 0, 0.2),
@@ -500,7 +503,7 @@ import { Ripple } from './models/ripple.model';
       top: 0;
       left: 0;
       opacity: 0.85;
-      transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transition: opacity 0.4s ease, transform 0.4s ease;
       overflow: visible;
       pointer-events: none;
       filter: saturate(1.15) brightness(1.05);
@@ -508,8 +511,7 @@ import { Ripple } from './models/ripple.model';
 
     .feature-card:hover .art-illustration {
       opacity: 1;
-      transform: scale(1.08) rotate(2deg);
-      filter: saturate(1.3) brightness(1.1) drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+      transform: scale(1.05);
     }
 
     .card-content {
@@ -536,11 +538,11 @@ import { Ripple } from './models/ripple.model';
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: transform 0.3s ease;
     }
 
     .feature-card:hover .feature-icon {
-      transform: scale(1.2) rotate(-8deg) translateY(-4px);
+      transform: translateY(-4px);
     }
 
     .feature-icon svg {
@@ -562,12 +564,10 @@ import { Ripple } from './models/ripple.model';
         -2px 2px 0 rgba(0, 0, 0, 0.3);
       letter-spacing: 0.3px;
       line-height: 1.3;
-      transition: all 0.3s ease;
     }
 
     .feature-card:hover h3 {
-      transform: translateY(-2px);
-      font-size: 1.7rem;
+      /* No transform to keep text crisp */
     }
 
     .feature-card p {
@@ -580,7 +580,6 @@ import { Ripple } from './models/ripple.model';
         0 1px 2px rgba(0, 0, 0, 0.3);
       font-weight: 500;
       padding-bottom: 16px;
-      transition: all 0.3s ease;
     }
 
     .feature-card:hover p {
@@ -601,7 +600,7 @@ import { Ripple } from './models/ripple.model';
       align-self: flex-start;
       border: 3px solid rgba(255, 255, 255, 0.4);
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.3);
-      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
       color: white;
       font-style: italic;
     }
@@ -609,63 +608,32 @@ import { Ripple } from './models/ripple.model';
     .feature-card:hover .card-badge {
       background: rgba(255, 255, 255, 0.4);
       border-color: rgba(255, 255, 255, 0.6);
-      transform: translateY(-4px) scale(1.05);
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.4);
     }
 
     /* Individual Card Themes */
     .card-generate {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      filter: drop-shadow(0 15px 35px rgba(102, 126, 234, 0.4));
-    }
-
-    .card-generate:hover {
-      filter: drop-shadow(0 20px 50px rgba(102, 126, 234, 0.6));
     }
 
     .card-review {
       background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      filter: drop-shadow(0 15px 35px rgba(245, 87, 108, 0.4));
-    }
-
-    .card-review:hover {
-      filter: drop-shadow(0 20px 50px rgba(245, 87, 108, 0.6));
     }
 
     .card-catalog {
       background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-      filter: drop-shadow(0 15px 35px rgba(79, 172, 254, 0.4));
-    }
-
-    .card-catalog:hover {
-      filter: drop-shadow(0 20px 50px rgba(79, 172, 254, 0.6));
     }
 
     .card-practice {
       background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-      filter: drop-shadow(0 15px 35px rgba(67, 233, 123, 0.4));
-    }
-
-    .card-practice:hover {
-      filter: drop-shadow(0 20px 50px rgba(67, 233, 123, 0.6));
     }
 
     .card-ai {
       background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-      filter: drop-shadow(0 15px 35px rgba(250, 112, 154, 0.4));
-    }
-
-    .card-ai:hover {
-      filter: drop-shadow(0 20px 50px rgba(250, 112, 154, 0.6));
     }
 
     .card-protection {
       background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
-      filter: drop-shadow(0 15px 35px rgba(139, 92, 246, 0.4));
-    }
-
-    .card-protection:hover {
-      filter: drop-shadow(0 20px 50px rgba(139, 92, 246, 0.6));
     }
 
     /* CTA Section */
