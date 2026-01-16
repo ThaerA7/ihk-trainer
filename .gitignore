@@ -28,3 +28,6 @@ dist-ssr
 .env
 .env.*
 !.env.example
+
+# Angular local cache
+.angular/cache/

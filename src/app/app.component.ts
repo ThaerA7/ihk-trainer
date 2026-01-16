@@ -46,81 +46,218 @@ import { Ripple } from './models/ripple.model';
         
         <h1 class="intro-title">
           Bereite dich optimal auf deine
-          <span class="highlight">IHK Prüfungen</span> vor
+          <span class="highlight">IHK&nbsp;Prüfungen</span> vor
         </h1>
         
         <p class="intro-description">
-          Die perfekte Plattform für IT-Umschüler zur Vorbereitung auf die AP1 und AP2 IHK-Prüfungen. 
-          Übe mit realistischen Aufgaben, die von der Community erstellt und von Moderatoren geprüft wurden.
+          Plattform für IT-Umschüler, die AP1 und AP2 realistisch üben wollen.<br>
+          Aufgaben werden von der Community gebaut, streng moderiert freigegeben und stehen Gästen sofort zum Üben bereit.
         </p>
 
         <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          <!-- Card 1: Build AP1/AP2 tasks -->
+          <div class="feature-card card-generate">
+            <div class="art-background">
+              <svg class="art-illustration" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <!-- Abstract code/document creation illustration -->
+                <defs>
+                  <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.9" />
+                  </linearGradient>
+                  <filter id="glow1">
+                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                    <feMerge>
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+                <!-- Brush strokes -->
+                <path d="M50,150 Q100,100 150,120 T250,150 T350,140" stroke="#8b5cf6" stroke-width="25" fill="none" opacity="0.3" stroke-linecap="round"/>
+                <path d="M80,200 Q130,180 180,200 T280,210" stroke="#ec4899" stroke-width="20" fill="none" opacity="0.4" stroke-linecap="round"/>
+                <!-- Document shapes -->
+                <rect x="120" y="80" width="100" height="120" rx="8" fill="url(#grad1)" opacity="0.6" filter="url(#glow1)"/>
+                <rect x="180" y="100" width="100" height="120" rx="8" fill="#a855f7" opacity="0.5" filter="url(#glow1)"/>
+                <!-- Floating elements -->
+                <circle cx="80" cy="100" r="15" fill="#fbbf24" opacity="0.6"/>
+                <circle cx="300" cy="180" r="20" fill="#60a5fa" opacity="0.5"/>
+                <path d="M250,60 L270,80 L250,100 L230,80 Z" fill="#fb923c" opacity="0.7"/>
               </svg>
             </div>
-            <h3>Praxisnahe Aufgaben</h3>
-            <p>Simuliere echte IHK-Prüfungsaufgaben, erstellt von Umschülern für Umschüler</p>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                  </svg>
+                </div>
+                <h3>AP1/AP2-Aufgaben bauen</h3>
+              </div>
+              <p>Baue Aufgaben im echten IHK-Format inklusive Erwartungshorizont, Musterlösung und Punktelogik — wahlweise rein manuell oder mit KI-Unterstützung.</p>
+              <div class="card-badge">Registriert + KI optional</div>
+            </div>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 11l3 3L22 4"></path>
-                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+          <!-- Card 2: Mod review & release -->
+          <div class="feature-card card-review">
+            <div class="art-background">
+              <svg class="art-illustration" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#f5576c;stop-opacity:0.9" />
+                  </linearGradient>
+                  <filter id="glow2">
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                    <feMerge>
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+                <!-- Checkmark abstract art -->
+                <path d="M50,120 Q100,180 150,140 Q200,100 280,60" stroke="#fbbf24" stroke-width="30" fill="none" opacity="0.4" stroke-linecap="round"/>
+                <path d="M70,100 L120,160 L320,40" stroke="#ef4444" stroke-width="22" fill="none" opacity="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Stars/approval symbols -->
+                <circle cx="250" cy="180" r="25" fill="url(#grad2)" opacity="0.6" filter="url(#glow2)"/>
+                <circle cx="100" cy="220" r="18" fill="#fbbf24" opacity="0.7"/>
+                <polygon points="350,140 360,165 385,170 367,188 372,213 350,200 328,213 333,188 315,170 340,165" fill="#fb923c" opacity="0.6"/>
               </svg>
             </div>
-            <h3>Qualitätskontrolle</h3>
-            <p>Jede Aufgabe wird von erfahrenen Moderatoren überprüft und freigegeben</p>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M9 11l3 3L22 4"></path>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                  </svg>
+                </div>
+                <h3>Mod-Check & Freigabe</h3>
+              </div>
+              <p>Moderatoren prüfen jede Aufgabe auf Fachlichkeit, Verständlichkeit, Punktevergabe und Copyright-Compliance, bevor sie für alle sichtbar wird.</p>
+              <div class="card-badge">Pflicht vor Livegang</div>
+            </div>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          <!-- Card 3: Catalog & guides -->
+          <div class="feature-card card-catalog">
+            <div class="art-background">
+              <svg class="art-illustration" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#4facfe;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:0.9" />
+                  </linearGradient>
+                </defs>
+                <!-- Book pages abstract -->
+                <rect x="80" y="60" width="120" height="160" rx="10" fill="#06b6d4" opacity="0.4" transform="rotate(-8 140 140)"/>
+                <rect x="120" y="70" width="120" height="160" rx="10" fill="#0ea5e9" opacity="0.5" transform="rotate(-4 180 150)"/>
+                <rect x="160" y="80" width="120" height="160" rx="10" fill="url(#grad3)" opacity="0.6"/>
+                <!-- Floating knowledge symbols -->
+                <circle cx="90" cy="200" r="12" fill="#3b82f6" opacity="0.6"/>
+                <circle cx="300" cy="120" r="16" fill="#06b6d4" opacity="0.5"/>
+                <path d="M250,200 L270,220 L290,200 L270,180 Z" fill="#0ea5e9" opacity="0.7"/>
+                <!-- Lines representing text -->
+                <line x1="175" y1="110" x2="255" y2="110" stroke="white" stroke-width="3" opacity="0.6"/>
+                <line x1="175" y1="130" x2="265" y2="130" stroke="white" stroke-width="3" opacity="0.6"/>
+                <line x1="175" y1="150" x2="245" y2="150" stroke="white" stroke-width="3" opacity="0.6"/>
               </svg>
             </div>
-            <h3>Themenkatalog</h3>
-            <p>Umfassender Leitfaden zu allen prüfungsrelevanten Themen</p>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                </div>
+                <h3>Themenkatalog & Leitfäden</h3>
+              </div>
+              <p>Alle prüfungsrelevanten Bereiche für IT-Umschüler: Schwerpunktlisten, Beispielaufgaben, Erwartungshorizonte und Lernpfade für AP1 und AP2.</p>
+              <div class="card-badge">Katalog AP1/AP2</div>
+            </div>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          <!-- Card 4: Practice access -->
+          <div class="feature-card card-practice">
+            <div class="art-background">
+              <svg class="art-illustration" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#43e97b;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:0.9" />
+                  </linearGradient>
+                </defs>
+                <!-- Target/practice abstract -->
+                <circle cx="200" cy="150" r="80" fill="none" stroke="#10b981" stroke-width="15" opacity="0.3"/>
+                <circle cx="200" cy="150" r="55" fill="none" stroke="#14b8a6" stroke-width="12" opacity="0.4"/>
+                <circle cx="200" cy="150" r="30" fill="url(#grad4)" opacity="0.6"/>
+                <!-- Growth arrows -->
+                <path d="M100,200 Q150,120 200,150" stroke="#22c55e" stroke-width="18" fill="none" opacity="0.4" stroke-linecap="round"/>
+                <path d="M200,150 Q250,100 300,130" stroke="#10b981" stroke-width="18" fill="none" opacity="0.4" stroke-linecap="round"/>
+                <!-- Achievement stars -->
+                <polygon points="80,80 88,100 108,104 94,118 98,138 80,128 62,138 66,118 52,104 72,100" fill="#fbbf24" opacity="0.7"/>
+                <polygon points="320,200 328,220 348,224 334,238 338,258 320,248 302,258 306,238 292,224 312,220" fill="#fb923c" opacity="0.6"/>
               </svg>
             </div>
-            <h3>Community-gestützt</h3>
-            <p>Registrierte Nutzer können eigene Aufgaben beitragen, Gäste können üben</p>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 6v6l4 2"></path>
+                  </svg>
+                </div>
+                <h3>Üben, einreichen, verbessern</h3>
+              </div>
+              <p>Gäste üben alle freigegebenen Sets anonym. Registrierte erstellen eigene Aufgaben, posten Lösungen, bekommen Feedback und sehen ihren Fortschritt.</p>
+              <div class="card-badge">Gast & Registriert</div>
+            </div>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M12 16v-4"></path>
-                <path d="M12 8h.01"></path>
+          <!-- Card 5: Fair use / anti abuse -->
+          <div class="feature-card card-protection">
+            <div class="art-background">
+              <svg class="art-illustration" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.9" />
+                  </linearGradient>
+                  <filter id="glow6">
+                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                    <feMerge>
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+                <!-- Shield abstract art -->
+                <path d="M200,50 L280,90 L280,180 Q280,220 200,250 Q120,220 120,180 L120,90 Z" fill="url(#grad6)" opacity="0.6" filter="url(#glow6)"/>
+                <path d="M200,70 L260,100 L260,170 Q260,200 200,225 Q140,200 140,170 L140,100 Z" fill="#8b5cf6" opacity="0.5"/>
+                <!-- Protection symbols -->
+                <circle cx="200" cy="150" r="35" fill="#a855f7" opacity="0.6"/>
+                <path d="M185,150 L195,160 L215,140" stroke="white" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+                <!-- Decorative elements -->
+                <circle cx="80" cy="100" r="15" fill="#c084fc" opacity="0.6"/>
+                <circle cx="320" cy="200" r="18" fill="#8b5cf6" opacity="0.6"/>
+                <polygon points="340,80 350,95 365,100 350,105 340,120 330,105 315,100 330,95" fill="#a855f7" opacity="0.7"/>
               </svg>
             </div>
-            <h3>KI-Unterstützung</h3>
-            <p>Nutze KI als Hilfe beim Erstellen qualitativ hochwertiger Aufgaben</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              </svg>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <h3>Fair Use & Anti-Troll</h3>
+              </div>
+              <p>Keine Original-IHK-Aufgaben, sondern nur Simulationen. Spam, Trolling oder Copy-Paste-Content werden gesperrt; Täter werden vom Einsenden ausgeschlossen.</p>
+              <div class="card-badge">Schutz & Vertrauen</div>
             </div>
-            <h3>Faire Nutzung</h3>
-            <p>Spam und unangemessene Inhalte werden konsequent unterbunden</p>
           </div>
         </div>
 
@@ -144,8 +281,8 @@ import { Ripple } from './models/ripple.model';
             <line x1="12" y1="8" x2="12.01" y2="8"></line>
           </svg>
           <p>
-            <strong>Wichtig:</strong> Diese Plattform enthält keine Original-IHK-Aufgaben (Urheberrecht). 
-            Alle Aufgaben sind von der Community erstellt und simulieren das Prüfungsformat.
+            <strong>Wichtig:</strong> Keine Original-IHK-Aufgaben (Urheberrecht), nur Simulationen aus der Community. 
+            Spam/Troll-Einsendungen werden geblockt, Wiederholungstäter vom Einreichen ausgeschlossen.
           </p>
         </div>
       </div>
@@ -190,7 +327,7 @@ import { Ripple } from './models/ripple.model';
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 24px 48px;
+      padding: 12px 20px;
       color: white;
     }
 
@@ -250,11 +387,11 @@ import { Ripple } from './models/ripple.model';
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 48px 24px;
+      padding: 16px 10px;
     }
 
     .intro-section {
-      max-width: 1200px;
+      max-width: 1400px;
       width: 100%;
       text-align: center;
       color: white;
@@ -282,8 +419,9 @@ import { Ripple } from './models/ripple.model';
     .intro-title {
       font-size: 3.5rem;
       font-weight: 800;
-      line-height: 1.2;
+      line-height: 1.3; /* increase to avoid descender clipping */
       margin: 0 0 24px 0;
+      overflow: visible; /* ensure glyphs render fully */
       text-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     }
 
@@ -292,68 +430,205 @@ import { Ripple } from './models/ripple.model';
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      display: inline-block;
+      display: inline; /* inline to preserve descenders */
+      padding-bottom: 0.05em; /* tiny breathing room for descenders */
+      white-space: nowrap; /* keep words together */
     }
 
     .intro-description {
-      font-size: 1.25rem;
-      line-height: 1.8;
+      font-size: 1.2rem;
+      line-height: 1.5;
       margin: 0 auto 48px;
-      max-width: 800px;
+      max-width: 1000px;
       opacity: 0.95;
-      font-weight: 300;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      font-family: 'Segoe UI', 'Helvetica Neue', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     /* Features Grid */
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-      margin: 48px 0;
+      grid-template-columns: repeat(2, minmax(460px, 1fr));
+      gap: 16px;
+      margin: 32px 0;
       text-align: left;
+      justify-items: stretch;
+    }
+
+    .feature-card:nth-child(5) {
+      grid-column: 1 / -1;
+      max-width: 640px;
+      justify-self: center;
+      width: 100%;
     }
 
     .feature-card {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 16px;
-      padding: 32px;
-      transition: all 0.3s;
+      position: relative;
+      border-radius: 24px;
+      padding: 0;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+      height: 320px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      pointer-events: auto;
+      isolation: isolate;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.08);
+      pointer-events: none;
+      z-index: 3;
+      border-radius: 22px;
     }
 
     .feature-card:hover {
-      background: rgba(255, 255, 255, 0.15);
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .art-background {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      z-index: 1;
+      border-radius: 22px;
+    }
+
+    .art-illustration {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.7;
+      transition: all 0.5s ease;
+      overflow: visible;
+      pointer-events: none;
+    }
+
+    .feature-card:hover .art-illustration {
+      opacity: 0.85;
+      transform: scale(1.03);
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 4;
+      padding: 28px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.45) 100%);
+      border-radius: 22px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
     }
 
     .feature-icon {
       width: 56px;
       height: 56px;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 16px;
+      flex-shrink: 0;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .feature-card:hover .feature-icon {
+      transform: scale(1.15) rotate(-5deg);
     }
 
     .feature-icon svg {
-      width: 28px;
-      height: 28px;
+      width: 56px;
+      height: 56px;
+      stroke-width: 2;
+      color: white;
+      filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.4));
     }
 
     .feature-card h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin: 0 0 12px 0;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 0;
+      color: white;
+      text-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.6),
+        0 1px 2px rgba(0, 0, 0, 0.4);
+      letter-spacing: 0.2px;
+      line-height: 1.3;
     }
 
     .feature-card p {
-      margin: 0;
-      opacity: 0.9;
+      margin: 0 0 auto 0;
+      color: rgba(255, 255, 255, 0.95);
       line-height: 1.6;
+      font-size: 0.95rem;
+      text-shadow: 
+        0 2px 6px rgba(0, 0, 0, 0.5),
+        0 1px 2px rgba(0, 0, 0, 0.3);
+      font-weight: 500;
+      padding-bottom: 16px;
+    }
+
+    .card-badge {
+      display: inline-block;
+      padding: 8px 16px;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 12px;
+      align-self: flex-start;
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      color: white;
+    }
+
+    .feature-card:hover .card-badge {
+      background: rgba(255, 255, 255, 0.35);
+      border-color: rgba(255, 255, 255, 0.5);
+      transform: translateY(-2px);
+    }
+
+    /* Individual Card Themes */
+    .card-generate {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .card-review {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+
+    .card-catalog {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+
+    .card-practice {
+      background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    }
+
+    .card-ai {
+      background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    }
+
+    .card-protection {
+      background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
     }
 
     /* CTA Section */
@@ -511,7 +786,7 @@ import { Ripple } from './models/ripple.model';
       }
 
       .login-btn {
-        padding: 10px 16px;
+        padding: 10px 14px;
         font-size: 0.9rem;
       }
 
@@ -525,6 +800,7 @@ import { Ripple } from './models/ripple.model';
 
       .features-grid {
         grid-template-columns: 1fr;
+        gap: 18px;
       }
 
       .cta-section {
