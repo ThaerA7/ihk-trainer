@@ -35,32 +35,67 @@ import { Component, EventEmitter, Output } from '@angular/core';
   `,
   styles: [`
     .login-card {
-      background: rgba(255, 255, 255, 0.98);
+      background: rgba(255, 255, 255, 0.99);
       backdrop-filter: blur(10px);
-      border-radius: 24px;
+      border-radius: 40px;
       padding: 48px 40px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 10px 30px rgba(0, 0, 0, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.5);
       width: 420px;
       max-width: 90vw;
+      border: 4px solid rgba(102, 126, 234, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .login-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .login-card::after {
+      content: '';
+      position: absolute;
+      bottom: -40%;
+      left: -20%;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(118, 75, 162, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
     }
 
     .login-card h2 {
       margin: 0 0 8px 0;
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: #2d3748;
-      font-weight: 700;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      position: relative;
+      z-index: 1;
     }
 
     .login-subtitle {
       margin: 0 0 32px 0;
       color: #718096;
-      font-size: 0.95rem;
+      font-size: 1rem;
+      font-weight: 500;
+      position: relative;
+      z-index: 1;
     }
 
     .login-buttons {
       display: flex;
       flex-direction: column;
       gap: 16px;
+      position: relative;
+      z-index: 1;
     }
 
     .btn {
@@ -68,42 +103,54 @@ import { Component, EventEmitter, Output } from '@angular/core';
       align-items: center;
       justify-content: center;
       gap: 12px;
-      padding: 14px 24px;
+      padding: 16px 24px;
       border: none;
-      border-radius: 12px;
+      border-radius: 24px;
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
-      transition: all 0.2s;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
       width: 100%;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+      border: 3px solid transparent;
     }
 
     .btn-icon {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
     }
 
     .btn-google {
       background: white;
       color: #2d3748;
-      border: 2px solid #e2e8f0;
+      border: 3px solid #e2e8f0;
     }
 
     .btn-google:hover {
       background: #f7fafc;
-      border-color: #cbd5e0;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-color: #667eea;
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-google:active {
+      transform: translateY(-2px) scale(1.01);
     }
 
     .btn-guest {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
+      border: 3px solid rgba(255, 255, 255, 0.3);
     }
 
     .btn-guest:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 16px 32px rgba(102, 126, 234, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .btn-guest:active {
+      transform: translateY(-2px) scale(1.01);
     }
 
     .divider {
@@ -111,19 +158,22 @@ import { Component, EventEmitter, Output } from '@angular/core';
       align-items: center;
       text-align: center;
       color: #a0aec0;
-      margin: 8px 0;
+      margin: 12px 0;
+      position: relative;
+      z-index: 1;
     }
 
     .divider::before,
     .divider::after {
       content: '';
       flex: 1;
-      border-bottom: 1px solid #e2e8f0;
+      border-bottom: 2px solid #e2e8f0;
     }
 
     .divider span {
       padding: 0 16px;
       font-size: 0.875rem;
+      font-weight: 600;
     }
   `]
 })
