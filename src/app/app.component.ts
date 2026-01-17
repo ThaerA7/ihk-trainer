@@ -12,6 +12,7 @@ import { Ripple } from './models/ripple.model';
   imports: [CommonModule, LogoComponent, LoginCardComponent],
   template: `
     <canvas #waterCanvas class="water-canvas"></canvas>
+    <canvas #effectsCanvas class="effects-canvas"></canvas>
     
     <!-- Header -->
     <header class="header">
@@ -212,7 +213,7 @@ import { Ripple } from './models/ripple.model';
                 </div>
                 <h3>Üben, einreichen, verbessern</h3>
               </div>
-              <p>Gäste üben alle freigegebenen Sets anonym. Registrierte erstellen eigene Aufgaben, posten Lösungen, bekommen Feedback und sehen ihren Fortschritt.</p>
+              <p>Gäste üben alle freigegebenen Sets anonym. Registrierte Benutzer erstellen eigene Aufgaben, posten ihre Lösungen, bekommen Feedback und sehen ihren detaillierten Fortschritt.</p>
               <div class="card-badge">Gast & Registriert</div>
             </div>
           </div>
@@ -318,6 +319,16 @@ import { Ripple } from './models/ripple.model';
       height: 100%;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       z-index: 0;
+    }
+
+    .effects-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1200;
     }
 
     /* Header */
@@ -821,9 +832,12 @@ import { Ripple } from './models/ripple.model';
 })
 export class AppComponent implements AfterViewInit, OnDestroy {
   @ViewChild('waterCanvas') canvasRef!: ElementRef<HTMLCanvasElement>;
+  @ViewChild('effectsCanvas') effectsCanvasRef!: ElementRef<HTMLCanvasElement>;
 
   private canvas!: HTMLCanvasElement;
   private ctx!: CanvasRenderingContext2D;
+  private effectsCanvas!: HTMLCanvasElement;
+  private effectsCtx!: CanvasRenderingContext2D;
   private width = 0;
   private height = 0;
   private particles: Particle[] = [];
@@ -832,6 +846,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   private time = 0;
   private mouse = { x: 0, y: 0 };
   private lastEffectPos = { x: 0, y: 0 };
+  private isPointerActive = false;
   
   showLoginDialog = false;
 
@@ -844,15 +859,20 @@ export class AppComponent implements AfterViewInit, OnDestroy {
 
   private initCanvas() {
     this.canvas = this.canvasRef.nativeElement;
+    this.effectsCanvas = this.effectsCanvasRef.nativeElement;
     const ctx = this.canvas.getContext('2d');
-    if (!ctx) return;
+    const effectsCtx = this.effectsCanvas.getContext('2d');
+    if (!ctx || !effectsCtx) return;
 
     this.ctx = ctx;
+    this.effectsCtx = effectsCtx;
     this.width = window.innerWidth;
     this.height = window.innerHeight;
 
     this.canvas.width = this.width;
     this.canvas.height = this.height;
+    this.effectsCanvas.width = this.width;
+    this.effectsCanvas.height = this.height;
 
     this.mouse.x = this.width / 2;
     this.mouse.y = this.height / 2;
@@ -864,12 +884,26 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     this.height = window.innerHeight;
     this.canvas.width = this.width;
     this.canvas.height = this.height;
+    this.effectsCanvas.width = this.width;
+    this.effectsCanvas.height = this.height;
   }
 
   @HostListener('mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
     this.mouse.x = event.clientX;
     this.mouse.y = event.clientY;
+
+    const isPressed = (event.buttons & 1) === 1 || (event.buttons & 2) === 2;
+    if (!isPressed) {
+      this.isPointerActive = false;
+      return;
+    }
+
+    if (!this.isPointerActive) {
+      this.isPointerActive = true;
+      this.lastEffectPos.x = event.clientX;
+      this.lastEffectPos.y = event.clientY;
+    }
     
     // Only create effects every 25 pixels of movement
     const dx = event.clientX - this.lastEffectPos.x;
@@ -884,8 +918,9 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     }
   }
 
-  @HostListener('click', ['$event'])
-  onClick(event: MouseEvent) {
+  @HostListener('window:mousedown', ['$event'])
+  onMouseDown(event: MouseEvent) {
+    if (event.button !== 0 && event.button !== 2) return;
     this.createParticles(event.clientX, event.clientY, true);
     this.createRipple(event.clientX, event.clientY, true);
   }
@@ -907,6 +942,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   private animate = () => {
     this.time += 0.01;
     this.drawBackground();
+    this.effectsCtx.clearRect(0, 0, this.width, this.height);
     this.drawRipples();
 
     // Draw particles
@@ -919,10 +955,10 @@ export class AppComponent implements AfterViewInit, OnDestroy {
         continue;
       }
 
-      this.ctx.fillStyle = `rgba(255, 255, 255, ${particle.life / particle.maxLife})`;
-      this.ctx.beginPath();
-      this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-      this.ctx.fill();
+      this.effectsCtx.fillStyle = `rgba(255, 255, 255, ${particle.life / particle.maxLife})`;
+      this.effectsCtx.beginPath();
+      this.effectsCtx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+      this.effectsCtx.fill();
     }
 
     this.animationId = requestAnimationFrame(this.animate);
@@ -979,13 +1015,13 @@ export class AppComponent implements AfterViewInit, OnDestroy {
         continue;
       }
 
-      this.ctx.save();
-      this.ctx.strokeStyle = `rgba(255, 255, 255, ${ripple.alpha * 0.6})`;
-      this.ctx.lineWidth = 1.5;
-      this.ctx.beginPath();
-      this.ctx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2);
-      this.ctx.stroke();
-      this.ctx.restore();
+      this.effectsCtx.save();
+      this.effectsCtx.strokeStyle = `rgba(255, 255, 255, ${ripple.alpha * 0.6})`;
+      this.effectsCtx.lineWidth = 1.5;
+      this.effectsCtx.beginPath();
+      this.effectsCtx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2);
+      this.effectsCtx.stroke();
+      this.effectsCtx.restore();
     }
   }
 }
