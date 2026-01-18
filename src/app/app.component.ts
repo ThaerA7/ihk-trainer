@@ -63,8 +63,8 @@ import { Ripple } from './models/ripple.model';
                 <!-- Abstract code/document creation illustration -->
                 <defs>
                   <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.8" />
-                    <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.9" />
+                    <stop offset="0%" style="stop-color:#0f4c5c;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#2c7a7b;stop-opacity:0.9" />
                   </linearGradient>
                   <filter id="glow1">
                     <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
@@ -75,15 +75,15 @@ import { Ripple } from './models/ripple.model';
                   </filter>
                 </defs>
                 <!-- Brush strokes -->
-                <path d="M50,150 Q100,100 150,120 T250,150 T350,140" stroke="#8b5cf6" stroke-width="25" fill="none" opacity="0.3" stroke-linecap="round"/>
-                <path d="M80,200 Q130,180 180,200 T280,210" stroke="#ec4899" stroke-width="20" fill="none" opacity="0.4" stroke-linecap="round"/>
+                <path d="M50,150 Q100,100 150,120 T250,150 T350,140" stroke="#3fa5a5" stroke-width="25" fill="none" opacity="0.3" stroke-linecap="round"/>
+                <path d="M80,200 Q130,180 180,200 T280,210" stroke="#f08c5b" stroke-width="20" fill="none" opacity="0.4" stroke-linecap="round"/>
                 <!-- Document shapes -->
                 <rect x="120" y="80" width="100" height="120" rx="8" fill="url(#grad1)" opacity="0.6" filter="url(#glow1)"/>
-                <rect x="180" y="100" width="100" height="120" rx="8" fill="#a855f7" opacity="0.5" filter="url(#glow1)"/>
+                <rect x="180" y="100" width="100" height="120" rx="8" fill="#3fa5a5" opacity="0.5" filter="url(#glow1)"/>
                 <!-- Floating elements -->
-                <circle cx="80" cy="100" r="15" fill="#fbbf24" opacity="0.6"/>
-                <circle cx="300" cy="180" r="20" fill="#60a5fa" opacity="0.5"/>
-                <path d="M250,60 L270,80 L250,100 L230,80 Z" fill="#fb923c" opacity="0.7"/>
+                <circle cx="80" cy="100" r="15" fill="#f4c95d" opacity="0.6"/>
+                <circle cx="300" cy="180" r="20" fill="#5ed6c8" opacity="0.5"/>
+                <path d="M250,60 L270,80 L250,100 L230,80 Z" fill="#e08f4f" opacity="0.7"/>
               </svg>
             </div>
             <div class="card-content">
@@ -107,8 +107,8 @@ import { Ripple } from './models/ripple.model';
               <svg class="art-illustration" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.8" />
-                    <stop offset="100%" style="stop-color:#f5576c;stop-opacity:0.9" />
+                    <stop offset="0%" style="stop-color:#f08c5b;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#d86a5a;stop-opacity:0.9" />
                   </linearGradient>
                   <filter id="glow2">
                     <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
@@ -119,12 +119,12 @@ import { Ripple } from './models/ripple.model';
                   </filter>
                 </defs>
                 <!-- Checkmark abstract art -->
-                <path d="M50,120 Q100,180 150,140 Q200,100 280,60" stroke="#fbbf24" stroke-width="30" fill="none" opacity="0.4" stroke-linecap="round"/>
-                <path d="M70,100 L120,160 L320,40" stroke="#ef4444" stroke-width="22" fill="none" opacity="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M50,120 Q100,180 150,140 Q200,100 280,60" stroke="#f4c95d" stroke-width="30" fill="none" opacity="0.4" stroke-linecap="round"/>
+                <path d="M70,100 L120,160 L320,40" stroke="#d86a5a" stroke-width="22" fill="none" opacity="0.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <!-- Stars/approval symbols -->
                 <circle cx="250" cy="180" r="25" fill="url(#grad2)" opacity="0.6" filter="url(#glow2)"/>
-                <circle cx="100" cy="220" r="18" fill="#fbbf24" opacity="0.7"/>
-                <polygon points="350,140 360,165 385,170 367,188 372,213 350,200 328,213 333,188 315,170 340,165" fill="#fb923c" opacity="0.6"/>
+                <circle cx="100" cy="220" r="18" fill="#f4c95d" opacity="0.7"/>
+                <polygon points="350,140 360,165 385,170 367,188 372,213 350,200 328,213 333,188 315,170 340,165" fill="#e08f4f" opacity="0.6"/>
               </svg>
             </div>
             <div class="card-content">
@@ -148,18 +148,18 @@ import { Ripple } from './models/ripple.model';
               <svg class="art-illustration" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:#4facfe;stop-opacity:0.8" />
-                    <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:0.9" />
+                    <stop offset="0%" style="stop-color:#2db3ad;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#5ed6c8;stop-opacity:0.9" />
                   </linearGradient>
                 </defs>
                 <!-- Book pages abstract -->
-                <rect x="80" y="60" width="120" height="160" rx="10" fill="#06b6d4" opacity="0.4" transform="rotate(-8 140 140)"/>
-                <rect x="120" y="70" width="120" height="160" rx="10" fill="#0ea5e9" opacity="0.5" transform="rotate(-4 180 150)"/>
+                <rect x="80" y="60" width="120" height="160" rx="10" fill="#2aa9a2" opacity="0.4" transform="rotate(-8 140 140)"/>
+                <rect x="120" y="70" width="120" height="160" rx="10" fill="#3cb7b0" opacity="0.5" transform="rotate(-4 180 150)"/>
                 <rect x="160" y="80" width="120" height="160" rx="10" fill="url(#grad3)" opacity="0.6"/>
                 <!-- Floating knowledge symbols -->
-                <circle cx="90" cy="200" r="12" fill="#3b82f6" opacity="0.6"/>
-                <circle cx="300" cy="120" r="16" fill="#06b6d4" opacity="0.5"/>
-                <path d="M250,200 L270,220 L290,200 L270,180 Z" fill="#0ea5e9" opacity="0.7"/>
+                <circle cx="90" cy="200" r="12" fill="#2c7a7b" opacity="0.6"/>
+                <circle cx="300" cy="120" r="16" fill="#3fa5a5" opacity="0.5"/>
+                <path d="M250,200 L270,220 L290,200 L270,180 Z" fill="#3cb7b0" opacity="0.7"/>
                 <!-- Lines representing text -->
                 <line x1="175" y1="110" x2="255" y2="110" stroke="white" stroke-width="3" opacity="0.6"/>
                 <line x1="175" y1="130" x2="265" y2="130" stroke="white" stroke-width="3" opacity="0.6"/>
@@ -187,20 +187,20 @@ import { Ripple } from './models/ripple.model';
               <svg class="art-illustration" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:#43e97b;stop-opacity:0.8" />
-                    <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:0.9" />
+                    <stop offset="0%" style="stop-color:#3aa17e;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#78c27d;stop-opacity:0.9" />
                   </linearGradient>
                 </defs>
                 <!-- Target/practice abstract -->
-                <circle cx="200" cy="150" r="80" fill="none" stroke="#10b981" stroke-width="15" opacity="0.3"/>
-                <circle cx="200" cy="150" r="55" fill="none" stroke="#14b8a6" stroke-width="12" opacity="0.4"/>
+                <circle cx="200" cy="150" r="80" fill="none" stroke="#2f8c6b" stroke-width="15" opacity="0.3"/>
+                <circle cx="200" cy="150" r="55" fill="none" stroke="#4fbf9a" stroke-width="12" opacity="0.4"/>
                 <circle cx="200" cy="150" r="30" fill="url(#grad4)" opacity="0.6"/>
                 <!-- Growth arrows -->
-                <path d="M100,200 Q150,120 200,150" stroke="#22c55e" stroke-width="18" fill="none" opacity="0.4" stroke-linecap="round"/>
-                <path d="M200,150 Q250,100 300,130" stroke="#10b981" stroke-width="18" fill="none" opacity="0.4" stroke-linecap="round"/>
+                <path d="M100,200 Q150,120 200,150" stroke="#5fbf8a" stroke-width="18" fill="none" opacity="0.4" stroke-linecap="round"/>
+                <path d="M200,150 Q250,100 300,130" stroke="#2f8c6b" stroke-width="18" fill="none" opacity="0.4" stroke-linecap="round"/>
                 <!-- Achievement stars -->
-                <polygon points="80,80 88,100 108,104 94,118 98,138 80,128 62,138 66,118 52,104 72,100" fill="#fbbf24" opacity="0.7"/>
-                <polygon points="320,200 328,220 348,224 334,238 338,258 320,248 302,258 306,238 292,224 312,220" fill="#fb923c" opacity="0.6"/>
+                <polygon points="80,80 88,100 108,104 94,118 98,138 80,128 62,138 66,118 52,104 72,100" fill="#f4c95d" opacity="0.7"/>
+                <polygon points="320,200 328,220 348,224 334,238 338,258 320,248 302,258 306,238 292,224 312,220" fill="#e08f4f" opacity="0.6"/>
               </svg>
             </div>
             <div class="card-content">
@@ -224,8 +224,8 @@ import { Ripple } from './models/ripple.model';
               <svg class="art-illustration" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.8" />
-                    <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.9" />
+                    <stop offset="0%" style="stop-color:#2b3a4a;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#4a6572;stop-opacity:0.9" />
                   </linearGradient>
                   <filter id="glow6">
                     <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
@@ -237,14 +237,14 @@ import { Ripple } from './models/ripple.model';
                 </defs>
                 <!-- Shield abstract art -->
                 <path d="M200,50 L280,90 L280,180 Q280,220 200,250 Q120,220 120,180 L120,90 Z" fill="url(#grad6)" opacity="0.6" filter="url(#glow6)"/>
-                <path d="M200,70 L260,100 L260,170 Q260,200 200,225 Q140,200 140,170 L140,100 Z" fill="#8b5cf6" opacity="0.5"/>
+                <path d="M200,70 L260,100 L260,170 Q260,200 200,225 Q140,200 140,170 L140,100 Z" fill="#3b5f6d" opacity="0.5"/>
                 <!-- Protection symbols -->
-                <circle cx="200" cy="150" r="35" fill="#a855f7" opacity="0.6"/>
+                <circle cx="200" cy="150" r="35" fill="#3fa5a5" opacity="0.6"/>
                 <path d="M185,150 L195,160 L215,140" stroke="white" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
                 <!-- Decorative elements -->
-                <circle cx="80" cy="100" r="15" fill="#c084fc" opacity="0.6"/>
-                <circle cx="320" cy="200" r="18" fill="#8b5cf6" opacity="0.6"/>
-                <polygon points="340,80 350,95 365,100 350,105 340,120 330,105 315,100 330,95" fill="#a855f7" opacity="0.7"/>
+                <circle cx="80" cy="100" r="15" fill="#5ed6c8" opacity="0.6"/>
+                <circle cx="320" cy="200" r="18" fill="#3b5f6d" opacity="0.6"/>
+                <polygon points="340,80 350,95 365,100 350,105 340,120 330,105 315,100 330,95" fill="#2c7a7b" opacity="0.7"/>
               </svg>
             </div>
             <div class="card-content">
@@ -270,26 +270,26 @@ import { Ripple } from './models/ripple.model';
         <svg class="bottom-art-illustration" viewBox="0 0 1200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="footerWaveMain" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.55" />
-              <stop offset="45%" stop-color="#a855f7" stop-opacity="0.6" />
-              <stop offset="100%" stop-color="#f472b6" stop-opacity="0.5" />
+              <stop offset="0%" stop-color="#1f6f78" stop-opacity="0.55" />
+              <stop offset="45%" stop-color="#4aa57f" stop-opacity="0.6" />
+              <stop offset="100%" stop-color="#f08c5b" stop-opacity="0.5" />
             </linearGradient>
             <linearGradient id="footerWaveAlt" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.35" />
-              <stop offset="60%" stop-color="#60a5fa" stop-opacity="0.45" />
-              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.35" />
+              <stop offset="0%" stop-color="#f4c95d" stop-opacity="0.35" />
+              <stop offset="60%" stop-color="#3fa5a5" stop-opacity="0.45" />
+              <stop offset="100%" stop-color="#5ed6c8" stop-opacity="0.35" />
             </linearGradient>
             <linearGradient id="footerPanel" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35" />
-              <stop offset="100%" stop-color="#a855f7" stop-opacity="0.45" />
+              <stop offset="100%" stop-color="#2c7a7b" stop-opacity="0.45" />
             </linearGradient>
             <radialGradient id="footerGlowLeft" cx="20%" cy="40%" r="70%">
-              <stop offset="0%" stop-color="#818cf8" stop-opacity="0.6" />
-              <stop offset="100%" stop-color="#4c1d95" stop-opacity="0" />
+              <stop offset="0%" stop-color="#2c7a7b" stop-opacity="0.6" />
+              <stop offset="100%" stop-color="#0f4c5c" stop-opacity="0" />
             </radialGradient>
             <radialGradient id="footerGlowRight" cx="85%" cy="15%" r="65%">
-              <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.55" />
-              <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+              <stop offset="0%" stop-color="#f4c95d" stop-opacity="0.55" />
+              <stop offset="100%" stop-color="#e6a03c" stop-opacity="0" />
             </radialGradient>
             <filter id="footerBlur" x="-20%" y="-40%" width="140%" height="180%">
               <feGaussianBlur stdDeviation="14" />
@@ -303,20 +303,20 @@ import { Ripple } from './models/ripple.model';
           <path d="M0,176 C260,140 480,200 680,170 C900,140 1040,150 1200,176" stroke="url(#footerWaveMain)" stroke-width="8" opacity="0.25" fill="none" stroke-linecap="round"/>
           <g opacity="0.7">
             <rect x="520" y="36" width="170" height="86" rx="18" fill="url(#footerPanel)" opacity="0.4"/>
-            <rect x="470" y="58" width="160" height="82" rx="18" fill="#a855f7" opacity="0.22"/>
-            <rect x="610" y="70" width="140" height="72" rx="16" fill="#60a5fa" opacity="0.2"/>
+            <rect x="470" y="58" width="160" height="82" rx="18" fill="#3fa5a5" opacity="0.22"/>
+            <rect x="610" y="70" width="140" height="72" rx="16" fill="#5ed6c8" opacity="0.2"/>
           </g>
           <path d="M140,70 L210,95 L300,68 L380,96" stroke="rgba(255,255,255,0.25)" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <circle cx="140" cy="70" r="6" fill="#fbbf24" opacity="0.7"/>
-          <circle cx="210" cy="95" r="5" fill="#60a5fa" opacity="0.65"/>
-          <circle cx="300" cy="68" r="4" fill="#34d399" opacity="0.6"/>
-          <circle cx="380" cy="96" r="5" fill="#f472b6" opacity="0.6"/>
-          <circle cx="90" cy="52" r="12" fill="#a855f7" opacity="0.35"/>
-          <circle cx="880" cy="42" r="10" fill="#60a5fa" opacity="0.35"/>
-          <circle cx="980" cy="58" r="18" fill="#fbbf24" opacity="0.45"/>
-          <circle cx="1060" cy="150" r="6" fill="#38bdf8" opacity="0.5"/>
-          <circle cx="1040" cy="120" r="4" fill="#f472b6" opacity="0.45"/>
-          <polygon points="1040,90 1052,110 1076,115 1058,132 1062,156 1040,144 1018,156 1022,132 1004,115 1028,110" fill="#fb923c" opacity="0.4"/>
+          <circle cx="140" cy="70" r="6" fill="#f4c95d" opacity="0.7"/>
+          <circle cx="210" cy="95" r="5" fill="#5ed6c8" opacity="0.65"/>
+          <circle cx="300" cy="68" r="4" fill="#78c27d" opacity="0.6"/>
+          <circle cx="380" cy="96" r="5" fill="#f08c5b" opacity="0.6"/>
+          <circle cx="90" cy="52" r="12" fill="#3fa5a5" opacity="0.35"/>
+          <circle cx="880" cy="42" r="10" fill="#5ed6c8" opacity="0.35"/>
+          <circle cx="980" cy="58" r="18" fill="#f4c95d" opacity="0.45"/>
+          <circle cx="1060" cy="150" r="6" fill="#5ed6c8" opacity="0.5"/>
+          <circle cx="1040" cy="120" r="4" fill="#f08c5b" opacity="0.45"/>
+          <polygon points="1040,90 1052,110 1076,115 1058,132 1062,156 1040,144 1018,156 1022,132 1004,115 1028,110" fill="#e08f4f" opacity="0.4"/>
         </svg>
       </div>
       <div class="bottom-inner">
@@ -324,16 +324,15 @@ import { Ripple } from './models/ripple.model';
           <div class="bottom-brand">
             <div class="bottom-title">IHK Trainer</div>
             <div class="bottom-tagline">
-              Community-built AP1/AP2 prep for IT Umschueler.
+              Von der Community gebautes AP1/AP2-Training für IT-Umschüler.
             </div>
           </div>
           <div class="bottom-links-grid">
             <div class="bottom-section">
               <div class="bottom-heading">Plattform</div>
               <div class="bottom-links">
-                <button class="footer-link" type="button">About</button>
-                <button class="footer-link" type="button">FAQ</button>
-                <button class="footer-link" type="button">Preise</button>
+                <button class="footer-link" type="button">Über uns</button>
+                <button class="footer-link" type="button">Häufige Fragen</button>
                 <button class="footer-link" type="button">Blog</button>
               </div>
             </div>
@@ -341,7 +340,7 @@ import { Ripple } from './models/ripple.model';
               <div class="bottom-heading">Service</div>
               <div class="bottom-links">
                 <button class="footer-link" type="button">Kontakt</button>
-                <button class="footer-link" type="button">Support</button>
+                <button class="footer-link" type="button">Hilfe</button>
                 <button class="footer-link" type="button">Datenschutz</button>
                 <button class="footer-link" type="button">Impressum</button>
               </div>
@@ -358,7 +357,7 @@ import { Ripple } from './models/ripple.model';
             </button>
           </div>
           <div class="bottom-social">
-            <div class="bottom-social-title">Community:</div>
+            <div class="bottom-social-title">Gemeinschaft:</div>
             <button class="footer-icon" type="button">
               <img src="assets/social/discord.png" alt="" aria-hidden="true" />
               <span class="footer-icon-label">Discord</span>
@@ -375,8 +374,17 @@ import { Ripple } from './models/ripple.model';
         </div>
       </div>
       <div class="bottom-meta">
-        <span>AP1/AP2 sets - fast practice, real feedback</span>
-        <span>IHK Trainer - community-first learning</span>
+        <span>
+          <a href="https://github.com/ThaerA7/ihk-trainer" target="_blank" rel="noopener">
+            IHK Trainer Quellcode auf GitHub ansehen
+          </a>
+        </span>
+        <span>
+          Ursprünglich erstellt von
+          <a href="https://github.com/thaera7" target="_blank" rel="noopener">
+            Thaer Aran
+          </a>
+        </span>
       </div>
     </footer>
 
@@ -408,7 +416,7 @@ import { Ripple } from './models/ripple.model';
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #0f4c5c 0%, #1b6f6a 100%);
       z-index: 0;
     }
 
@@ -528,7 +536,7 @@ import { Ripple } from './models/ripple.model';
     }
 
     .highlight {
-      background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+      background: linear-gradient(135deg, #f4c95d 0%, #f08c5b 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -623,7 +631,7 @@ import { Ripple } from './models/ripple.model';
       height: 100%;
       display: flex;
       flex-direction: column;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 100%);
+      background: linear-gradient(to bottom, rgba(7, 30, 34, 0.22) 0%, rgba(7, 30, 34, 0.5) 100%);
     }
 
     .card-header {
@@ -715,27 +723,27 @@ import { Ripple } from './models/ripple.model';
 
     /* Individual Card Themes */
     .card-generate {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #0f4c5c 0%, #2c7a7b 100%);
     }
 
     .card-review {
-      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      background: linear-gradient(135deg, #f08c5b 0%, #d86a5a 100%);
     }
 
     .card-catalog {
-      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      background: linear-gradient(135deg, #2db3ad 0%, #5ed6c8 100%);
     }
 
     .card-practice {
-      background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+      background: linear-gradient(135deg, #3aa17e 0%, #78c27d 100%);
     }
 
     .card-ai {
-      background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+      background: linear-gradient(135deg, #f4c95d 0%, #e6a03c 100%);
     }
 
     .card-protection {
-      background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+      background: linear-gradient(135deg, #2b3a4a 0%, #4a6572 100%);
     }
 
     .cta-button {
@@ -758,7 +766,7 @@ import { Ripple } from './models/ripple.model';
 
     .cta-button.primary {
       background: white;
-      color: #667eea;
+      color: #0f4c5c;
     }
 
     .cta-button.primary:hover {
@@ -842,6 +850,13 @@ import { Ripple } from './models/ripple.model';
       font-weight: 500;
     }
 
+    .bottom-note {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 480px;
+    }
+
     .bottom-links-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -876,6 +891,7 @@ import { Ripple } from './models/ripple.model';
       color: rgba(255, 255, 255, 0.88);
       padding: 2px 0;
       border-radius: 0;
+      text-decoration: none;
       font-size: 0.9rem;
       text-transform: none;
       letter-spacing: 0.2px;
@@ -979,6 +995,16 @@ import { Ripple } from './models/ripple.model';
       position: relative;
       z-index: 2;
       border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .bottom-meta a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .bottom-meta a:hover {
+      color: white;
     }
 
     /* Dialog */
@@ -1092,6 +1118,10 @@ import { Ripple } from './models/ripple.model';
 
       .bottom-left {
         align-items: center;
+      }
+
+      .bottom-note {
+        text-align: center;
       }
 
       .bottom-links-grid {
@@ -1292,9 +1322,9 @@ export class AppComponent implements AfterViewInit, OnDestroy {
 
   private drawBackground() {
     const gradient = this.ctx.createLinearGradient(0, 0, this.width, this.height);
-    const hueBase = 280 + Math.sin(this.time * 0.6) * 12;
-    gradient.addColorStop(0, `hsl(${hueBase}, 70%, 55%)`);
-    gradient.addColorStop(1, `hsl(${hueBase - 50}, 75%, 50%)`);
+    const hueBase = 190 + Math.sin(this.time * 0.6) * 10;
+    gradient.addColorStop(0, `hsl(${hueBase}, 55%, 45%)`);
+    gradient.addColorStop(1, `hsl(${hueBase - 28}, 55%, 38%)`);
     this.ctx.fillStyle = gradient;
     this.ctx.fillRect(0, 0, this.width, this.height);
 

@@ -42,7 +42,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 10px 30px rgba(0, 0, 0, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.5);
       width: 420px;
       max-width: 90vw;
-      border: 4px solid rgba(102, 126, 234, 0.15);
+      border: 4px solid rgba(15, 76, 92, 0.2);
       position: relative;
       overflow: hidden;
     }
@@ -54,7 +54,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
       right: -30%;
       width: 300px;
       height: 300px;
-      background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(15, 76, 92, 0.12) 0%, transparent 70%);
       border-radius: 50%;
       pointer-events: none;
     }
@@ -66,7 +66,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
       left: -20%;
       width: 200px;
       height: 200px;
-      background: radial-gradient(circle, rgba(118, 75, 162, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(240, 140, 91, 0.12) 0%, transparent 70%);
       border-radius: 50%;
       pointer-events: none;
     }
@@ -128,7 +128,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 
     .btn-google:hover {
       background: #f7fafc;
-      border-color: #667eea;
+      border-color: #2c7a7b;
       transform: translateY(-4px) scale(1.02);
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.4);
     }
@@ -138,14 +138,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
     }
 
     .btn-guest {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #0f4c5c 0%, #2c7a7b 100%);
       color: white;
       border: 3px solid rgba(255, 255, 255, 0.3);
     }
 
     .btn-guest:hover {
       transform: translateY(-4px) scale(1.02);
-      box-shadow: 0 16px 32px rgba(102, 126, 234, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 16px 32px rgba(15, 76, 92, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.3);
       border-color: rgba(255, 255, 255, 0.5);
     }
 
