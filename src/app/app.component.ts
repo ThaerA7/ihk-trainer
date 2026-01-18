@@ -375,8 +375,8 @@ import { Ripple } from './models/ripple.model';
         </div>
       </div>
       <div class="bottom-meta">
-        <span>IHK Trainer - community-first learning</span>
         <span>AP1/AP2 sets - fast practice, real feedback</span>
+        <span>IHK Trainer - community-first learning</span>
       </div>
     </footer>
 
@@ -894,13 +894,14 @@ import { Ripple } from './models/ripple.model';
       display: flex;
       flex-direction: column;
       gap: 18px;
-      align-items: flex-start;
+      align-items: flex-end;
     }
 
     .bottom-cta {
       display: grid;
       gap: 10px;
       width: min(100%, 280px);
+      justify-items: stretch;
     }
 
     .cta-button.compact {
@@ -918,7 +919,9 @@ import { Ripple } from './models/ripple.model';
       display: flex;
       flex-wrap: wrap;
       gap: 18px;
-      align-items: flex-start;
+      align-items: flex-end;
+      justify-content: flex-end;
+      width: min(100%, 280px);
     }
 
     .bottom-social-title {
@@ -1121,6 +1124,8 @@ import { Ripple } from './models/ripple.model';
 
       .bottom-social {
         justify-content: center;
+        align-items: center;
+        width: 100%;
       }
 
       .bottom-social-title {
