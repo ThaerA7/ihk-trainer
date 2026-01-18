@@ -261,33 +261,124 @@ import { Ripple } from './models/ripple.model';
             </div>
           </div>
         </div>
-
-        <div class="cta-section">
-          <button class="cta-button primary" (click)="showLoginDialog = true">
-            Jetzt loslegen
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </button>
-          <button class="cta-button secondary" (click)="showLoginDialog = true">
-            Als Gast üben
-          </button>
-        </div>
-
-        <div class="info-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="12" y1="16" x2="12" y2="12"></line>
-            <line x1="12" y1="8" x2="12.01" y2="8"></line>
-          </svg>
-          <p>
-            <strong>Wichtig:</strong> Keine Original-IHK-Aufgaben (Urheberrecht), nur Simulationen aus der Community. 
-            Spam/Troll-Einsendungen werden geblockt, Wiederholungstäter vom Einreichen ausgeschlossen.
-          </p>
-        </div>
       </div>
     </div>
+
+    <!-- Bottom Bar -->
+    <footer class="bottom-bar">
+      <div class="bottom-art">
+        <svg class="bottom-art-illustration" viewBox="0 0 1200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="footerWaveMain" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.55" />
+              <stop offset="45%" stop-color="#a855f7" stop-opacity="0.6" />
+              <stop offset="100%" stop-color="#f472b6" stop-opacity="0.5" />
+            </linearGradient>
+            <linearGradient id="footerWaveAlt" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.35" />
+              <stop offset="60%" stop-color="#60a5fa" stop-opacity="0.45" />
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.35" />
+            </linearGradient>
+            <linearGradient id="footerPanel" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35" />
+              <stop offset="100%" stop-color="#a855f7" stop-opacity="0.45" />
+            </linearGradient>
+            <radialGradient id="footerGlowLeft" cx="20%" cy="40%" r="70%">
+              <stop offset="0%" stop-color="#818cf8" stop-opacity="0.6" />
+              <stop offset="100%" stop-color="#4c1d95" stop-opacity="0" />
+            </radialGradient>
+            <radialGradient id="footerGlowRight" cx="85%" cy="15%" r="65%">
+              <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.55" />
+              <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+            </radialGradient>
+            <filter id="footerBlur" x="-20%" y="-40%" width="140%" height="180%">
+              <feGaussianBlur stdDeviation="14" />
+            </filter>
+          </defs>
+          <rect x="-80" y="-60" width="680" height="320" fill="url(#footerGlowLeft)" opacity="0.85" filter="url(#footerBlur)"/>
+          <rect x="520" y="-80" width="720" height="300" fill="url(#footerGlowRight)" opacity="0.8" filter="url(#footerBlur)"/>
+          <path d="M0,118 C220,38 420,210 640,130 C860,60 1020,70 1200,130 L1200,200 L0,200 Z" fill="url(#footerWaveMain)" opacity="0.45"/>
+          <path d="M0,150 C240,110 460,230 700,160 C880,110 1040,140 1200,170 L1200,200 L0,200 Z" fill="url(#footerWaveAlt)" opacity="0.35"/>
+          <path d="M0,100 C210,60 390,150 600,115 C820,80 1000,90 1200,110" stroke="rgba(255,255,255,0.35)" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M0,176 C260,140 480,200 680,170 C900,140 1040,150 1200,176" stroke="url(#footerWaveMain)" stroke-width="8" opacity="0.25" fill="none" stroke-linecap="round"/>
+          <g opacity="0.7">
+            <rect x="520" y="36" width="170" height="86" rx="18" fill="url(#footerPanel)" opacity="0.4"/>
+            <rect x="470" y="58" width="160" height="82" rx="18" fill="#a855f7" opacity="0.22"/>
+            <rect x="610" y="70" width="140" height="72" rx="16" fill="#60a5fa" opacity="0.2"/>
+          </g>
+          <path d="M140,70 L210,95 L300,68 L380,96" stroke="rgba(255,255,255,0.25)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="140" cy="70" r="6" fill="#fbbf24" opacity="0.7"/>
+          <circle cx="210" cy="95" r="5" fill="#60a5fa" opacity="0.65"/>
+          <circle cx="300" cy="68" r="4" fill="#34d399" opacity="0.6"/>
+          <circle cx="380" cy="96" r="5" fill="#f472b6" opacity="0.6"/>
+          <circle cx="90" cy="52" r="12" fill="#a855f7" opacity="0.35"/>
+          <circle cx="880" cy="42" r="10" fill="#60a5fa" opacity="0.35"/>
+          <circle cx="980" cy="58" r="18" fill="#fbbf24" opacity="0.45"/>
+          <circle cx="1060" cy="150" r="6" fill="#38bdf8" opacity="0.5"/>
+          <circle cx="1040" cy="120" r="4" fill="#f472b6" opacity="0.45"/>
+          <polygon points="1040,90 1052,110 1076,115 1058,132 1062,156 1040,144 1018,156 1022,132 1004,115 1028,110" fill="#fb923c" opacity="0.4"/>
+        </svg>
+      </div>
+      <div class="bottom-inner">
+        <div class="bottom-left">
+          <div class="bottom-brand">
+            <div class="bottom-title">IHK Trainer</div>
+            <div class="bottom-tagline">
+              Community-built AP1/AP2 prep for IT Umschueler.
+            </div>
+          </div>
+          <div class="bottom-links-grid">
+            <div class="bottom-section">
+              <div class="bottom-heading">Plattform</div>
+              <div class="bottom-links">
+                <button class="footer-link" type="button">About</button>
+                <button class="footer-link" type="button">FAQ</button>
+                <button class="footer-link" type="button">Preise</button>
+                <button class="footer-link" type="button">Blog</button>
+              </div>
+            </div>
+            <div class="bottom-section">
+              <div class="bottom-heading">Service</div>
+              <div class="bottom-links">
+                <button class="footer-link" type="button">Kontakt</button>
+                <button class="footer-link" type="button">Support</button>
+                <button class="footer-link" type="button">Datenschutz</button>
+                <button class="footer-link" type="button">Impressum</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-right">
+          <div class="bottom-cta">
+            <button class="cta-button primary compact" (click)="showLoginDialog = true">
+              Jetzt loslegen
+            </button>
+            <button class="cta-button secondary compact" (click)="showLoginDialog = true">
+              Als Gast testen
+            </button>
+          </div>
+          <div class="bottom-social">
+            <div class="bottom-social-title">Community:</div>
+            <button class="footer-icon" type="button">
+              <img src="assets/social/discord.png" alt="" aria-hidden="true" />
+              <span class="footer-icon-label">Discord</span>
+            </button>
+            <button class="footer-icon" type="button">
+              <img src="assets/social/forum.png" alt="" aria-hidden="true" />
+              <span class="footer-icon-label">Forum</span>
+            </button>
+            <button class="footer-icon" type="button">
+              <img src="assets/social/reddit.png" alt="" aria-hidden="true" />
+              <span class="footer-icon-label">Reddit</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-meta">
+        <span>IHK Trainer - community-first learning</span>
+        <span>AP1/AP2 sets - fast practice, real feedback</span>
+      </div>
+    </footer>
 
     <!-- Login Dialog -->
     <div class="dialog-overlay" *ngIf="showLoginDialog" (click)="showLoginDialog = false">
@@ -647,14 +738,6 @@ import { Ripple } from './models/ripple.model';
       background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
     }
 
-    /* CTA Section */
-    .cta-section {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      margin: 48px 0;
-    }
-
     .cta-button {
       display: flex;
       align-items: center;
@@ -694,30 +777,205 @@ import { Ripple } from './models/ripple.model';
       transform: translateY(-2px);
     }
 
-    /* Info Box */
-    .info-box {
+    /* Bottom Bar */
+    .bottom-bar {
+      position: relative;
+      z-index: 8;
+      padding: 26px 0 32px;
+      background: rgba(255, 255, 255, 0.12);
+      border-top: 4px solid rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 -14px 28px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+      overflow: hidden;
+    }
+
+    .bottom-art {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.85;
+    }
+
+    .bottom-art-illustration {
+      width: 100%;
+      height: 100%;
+      display: block;
+      filter: saturate(1.15) brightness(1.05);
+    }
+
+    .bottom-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+      gap: 32px;
+      align-items: start;
+      position: relative;
+      z-index: 2;
+    }
+
+    .bottom-left {
       display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      background: rgba(255, 215, 0, 0.15);
-      border: 2px solid rgba(255, 215, 0, 0.4);
-      border-radius: 12px;
-      padding: 20px 24px;
-      margin: 48px auto 0;
-      max-width: 800px;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .bottom-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .bottom-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: white;
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .bottom-tagline {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      font-weight: 500;
+    }
+
+    .bottom-links-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px 28px;
+    }
+
+    .bottom-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .bottom-heading {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .bottom-links {
+      display: grid;
+      gap: 8px;
+    }
+
+    .footer-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.88);
+      padding: 2px 0;
+      border-radius: 0;
+      font-size: 0.9rem;
+      text-transform: none;
+      letter-spacing: 0.2px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: color 0.2s, transform 0.2s;
       text-align: left;
     }
 
-    .info-box svg {
-      width: 24px;
-      height: 24px;
-      flex-shrink: 0;
-      color: #ffd700;
+    .footer-link:hover {
+      color: white;
+      transform: translateX(2px);
     }
 
-    .info-box p {
-      margin: 0;
-      line-height: 1.6;
+    .bottom-right {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .bottom-cta {
+      display: grid;
+      gap: 10px;
+      width: min(100%, 280px);
+    }
+
+    .cta-button.compact {
+      padding: 12px 20px;
+      font-size: 0.95rem;
+      border-radius: 999px;
+    }
+
+    .bottom-cta .cta-button.compact {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .bottom-social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .bottom-social-title {
+      width: 100%;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: left;
+    }
+
+    .footer-icon {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.9);
+      padding: 4px 6px;
+      cursor: pointer;
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    .footer-icon img {
+      width: 36px;
+      height: 36px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .footer-icon-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    .footer-icon:hover {
+      transform: translateY(-2px);
+      color: white;
+    }
+
+    .bottom-meta {
+      max-width: 1400px;
+      margin: 20px auto 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.85rem;
+      opacity: 0.75;
+      padding: 14px 24px 0;
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     /* Dialog */
@@ -819,13 +1077,60 @@ import { Ripple } from './models/ripple.model';
         gap: 18px;
       }
 
-      .cta-section {
-        flex-direction: column;
-      }
-
       .cta-button {
         width: 100%;
         justify-content: center;
+      }
+
+      .bottom-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .bottom-left {
+        align-items: center;
+      }
+
+      .bottom-links-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bottom-section {
+        align-items: center;
+      }
+
+      .bottom-heading {
+        text-align: center;
+      }
+
+      .bottom-links {
+        justify-items: center;
+      }
+
+      .footer-link {
+        text-align: center;
+      }
+
+      .bottom-right {
+        align-items: center;
+      }
+
+      .bottom-cta {
+        width: 100%;
+      }
+
+      .bottom-social {
+        justify-content: center;
+      }
+
+      .bottom-social-title {
+        text-align: center;
+      }
+
+      .bottom-meta {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
     }
   `]
