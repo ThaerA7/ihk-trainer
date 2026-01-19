@@ -18,9 +18,43 @@ import { Ripple } from './models/ripple.model';
     <header class="header">
       <div class="logo-compact">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="3"/>
-          <path d="M 30 35 L 30 65 M 45 35 L 45 65 M 45 50 L 60 35 M 60 35 L 60 65 M 60 50 L 70 35 L 70 65" 
-                stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="compactRingGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#5ed6c8" />
+              <stop offset="50%" stop-color="#f4c95d" />
+              <stop offset="100%" stop-color="#f08c5b" />
+            </linearGradient>
+            <linearGradient id="compactFuseIH" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#5ed6c8" />
+              <stop offset="100%" stop-color="#f4c95d" />
+            </linearGradient>
+            <linearGradient id="compactFuseHK" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#f4c95d" />
+              <stop offset="100%" stop-color="#f08c5b" />
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="45" fill="none" stroke="url(#compactRingGradient)" stroke-width="3"/>
+          <path d="M26 32 L26 68" stroke="#5ed6c8" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M38 32 L38 68" stroke="#f4c95d" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M50 32 L50 68" stroke="#f4c95d" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M38 50 L50 50" stroke="#f4c95d" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M62 32 L62 68" stroke="#f08c5b" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M62 50 L74 34" stroke="#f08c5b" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M62 50 L74 66" stroke="#f08c5b" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path
+            d="M26 50 C31 44 34 44 38 50"
+            stroke="url(#compactFuseIH)"
+            stroke-width="4.2"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <path
+            d="M50 50 C55 44 58 44 62 50"
+            stroke="url(#compactFuseHK)"
+            stroke-width="4.2"
+            fill="none"
+            stroke-linecap="round"
+          />
         </svg>
         <span>IHK Trainer</span>
       </div>
@@ -322,7 +356,48 @@ import { Ripple } from './models/ripple.model';
       <div class="bottom-inner">
         <div class="bottom-left">
           <div class="bottom-brand">
-            <div class="bottom-title">IHK Trainer</div>
+            <div class="bottom-brand-row">
+              <svg class="bottom-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="footerRingGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#5ed6c8" />
+                    <stop offset="50%" stop-color="#f4c95d" />
+                    <stop offset="100%" stop-color="#f08c5b" />
+                  </linearGradient>
+                  <linearGradient id="footerFuseIH" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#5ed6c8" />
+                    <stop offset="100%" stop-color="#f4c95d" />
+                  </linearGradient>
+                  <linearGradient id="footerFuseHK" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#f4c95d" />
+                    <stop offset="100%" stop-color="#f08c5b" />
+                  </linearGradient>
+                </defs>
+                <circle cx="50" cy="50" r="45" fill="none" stroke="url(#footerRingGradient)" stroke-width="3"/>
+                <path d="M26 32 L26 68" stroke="#5ed6c8" stroke-width="4" fill="none" stroke-linecap="round"/>
+                <path d="M38 32 L38 68" stroke="#f4c95d" stroke-width="4" fill="none" stroke-linecap="round"/>
+                <path d="M50 32 L50 68" stroke="#f4c95d" stroke-width="4" fill="none" stroke-linecap="round"/>
+                <path d="M38 50 L50 50" stroke="#f4c95d" stroke-width="4" fill="none" stroke-linecap="round"/>
+                <path d="M62 32 L62 68" stroke="#f08c5b" stroke-width="4" fill="none" stroke-linecap="round"/>
+                <path d="M62 50 L74 34" stroke="#f08c5b" stroke-width="4" fill="none" stroke-linecap="round"/>
+                <path d="M62 50 L74 66" stroke="#f08c5b" stroke-width="4" fill="none" stroke-linecap="round"/>
+                <path
+                  d="M26 50 C31 44 34 44 38 50"
+                  stroke="url(#footerFuseIH)"
+                  stroke-width="4.2"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M50 50 C55 44 58 44 62 50"
+                  stroke="url(#footerFuseHK)"
+                  stroke-width="4.2"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <div class="bottom-title">IHK Trainer</div>
+            </div>
             <div class="bottom-tagline">
               Von der Community gebautes AP1/AP2-Training für IT-Umschüler.
             </div>
@@ -836,6 +911,19 @@ import { Ripple } from './models/ripple.model';
       gap: 6px;
     }
 
+    .bottom-brand-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .bottom-logo {
+      width: 44px;
+      height: 44px;
+      flex: 0 0 auto;
+      filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.35));
+    }
+
     .bottom-title {
       font-size: 1.6rem;
       font-weight: 800;
@@ -1118,6 +1206,10 @@ import { Ripple } from './models/ripple.model';
 
       .bottom-left {
         align-items: center;
+      }
+
+      .bottom-brand-row {
+        justify-content: center;
       }
 
       .bottom-note {

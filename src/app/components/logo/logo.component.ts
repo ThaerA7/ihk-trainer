@@ -7,9 +7,43 @@ import { Component } from '@angular/core';
     <div class="logo-container">
       <div class="logo-icon">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="3"/>
-          <path d="M 30 35 L 30 65 M 45 35 L 45 65 M 45 50 L 60 35 M 60 35 L 60 65 M 60 50 L 70 35 L 70 65" 
-                stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="logoRingGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#5ed6c8" />
+              <stop offset="50%" stop-color="#f4c95d" />
+              <stop offset="100%" stop-color="#f08c5b" />
+            </linearGradient>
+            <linearGradient id="logoFuseIH" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#5ed6c8" />
+              <stop offset="100%" stop-color="#f4c95d" />
+            </linearGradient>
+            <linearGradient id="logoFuseHK" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#f4c95d" />
+              <stop offset="100%" stop-color="#f08c5b" />
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="45" fill="none" stroke="url(#logoRingGradient)" stroke-width="3"/>
+          <path d="M26 32 L26 68" stroke="#5ed6c8" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M38 32 L38 68" stroke="#f4c95d" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M50 32 L50 68" stroke="#f4c95d" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M38 50 L50 50" stroke="#f4c95d" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M62 32 L62 68" stroke="#f08c5b" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M62 50 L74 34" stroke="#f08c5b" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M62 50 L74 66" stroke="#f08c5b" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path
+            d="M26 50 C31 44 34 44 38 50"
+            stroke="url(#logoFuseIH)"
+            stroke-width="4.2"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <path
+            d="M50 50 C55 44 58 44 62 50"
+            stroke="url(#logoFuseHK)"
+            stroke-width="4.2"
+            fill="none"
+            stroke-linecap="round"
+          />
         </svg>
       </div>
       <h1 class="logo-text">IHK Exam Trainer</h1>
