@@ -252,7 +252,68 @@ import { Ripple } from './models/ripple.model';
             </div>
           </div>
 
-          <!-- Card 5: Fair use / anti abuse -->
+          <!-- Card 5: Statistik & Tracking -->
+          <div class="feature-card card-stats">
+            <div class="art-background">
+              <svg class="art-illustration" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="grad7" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.85" />
+                    <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.9" />
+                  </linearGradient>
+                  <linearGradient id="grad7b" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.6" />
+                    <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:0.8" />
+                  </linearGradient>
+                  <filter id="glow7">
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                    <feMerge>
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+                <!-- Bar chart illustration -->
+                <rect x="80" y="180" width="45" height="60" rx="6" fill="url(#grad7b)" opacity="0.7" filter="url(#glow7)"/>
+                <rect x="140" y="140" width="45" height="100" rx="6" fill="url(#grad7b)" opacity="0.8" filter="url(#glow7)"/>
+                <rect x="200" y="100" width="45" height="140" rx="6" fill="url(#grad7)" opacity="0.9" filter="url(#glow7)"/>
+                <rect x="260" y="130" width="45" height="110" rx="6" fill="url(#grad7b)" opacity="0.8" filter="url(#glow7)"/>
+                
+                <!-- Trend line overlay -->
+                <path d="M100 200 Q165 155 222 118 Q280 145 285 150" stroke="#a78bfa" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+                <circle cx="100" cy="200" r="6" fill="#667eea" opacity="0.9"/>
+                <circle cx="165" cy="155" r="6" fill="#764ba2" opacity="0.9"/>
+                <circle cx="222" cy="118" r="7" fill="#a78bfa" opacity="0.95"/>
+                <circle cx="285" cy="150" r="6" fill="#8b5cf6" opacity="0.9"/>
+                
+                <!-- Data points background -->
+                <circle cx="320" cy="90" r="20" fill="#667eea" opacity="0.4"/>
+                <circle cx="60" cy="120" r="16" fill="#764ba2" opacity="0.3"/>
+                
+                <!-- Axis lines -->
+                <line x1="60" y1="250" x2="340" y2="250" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+                <line x1="60" y1="80" x2="60" y2="250" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M4 19h16"></path>
+                    <path d="M8 19V9"></path>
+                    <path d="M12 19V5"></path>
+                    <path d="M16 19v-7"></path>
+                    <circle cx="12" cy="3" r="1.4"></circle>
+                  </svg>
+                </div>
+                <h3>Statistik & Verlauf</h3>
+              </div>
+              <p>Persönliche Lern-Statistiken pro User: Fortschritt nach Themen, Stärken-Schwächen, Zeitverlauf und automatische Vergleichswerte zu deiner Kohorte.</p>
+              <div class="card-badge">Persönlich & Datenschutz</div>
+            </div>
+          </div>
+
+          <!-- Card 6: Fair use / anti abuse -->
           <div class="feature-card card-protection">
             <div class="art-background">
               <svg class="art-illustration" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
@@ -296,6 +357,11 @@ import { Ripple } from './models/ripple.model';
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Additional Info Text -->
+    <div class="info-text">
+      <p>Erstelle realistische IHK-Prüfungsaufgaben und übe mit der Community – transparent, fair und kostenlos.</p>
     </div>
 
     <!-- Bottom Bar -->
@@ -576,7 +642,7 @@ import { Ripple } from './models/ripple.model';
     }
 
     .intro-section {
-      max-width: 1400px;
+      max-width: 1600px;
       width: 100%;
       text-align: center;
       color: white;
@@ -621,57 +687,52 @@ import { Ripple } from './models/ripple.model';
     }
 
     .intro-description {
-      font-size: 1.2rem;
-      line-height: 1.6;
+      font-size: 1.35rem;
+      line-height: 1.8;
       margin: 0 auto 48px;
       max-width: 1000px;
-      opacity: 0.95;
-      font-weight: 500;
-      letter-spacing: 0.2px;
+      color: rgba(255, 255, 255, 0.98);
+      font-weight: 600;
+      letter-spacing: 0.3px;
       text-align: center;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
     }
 
     /* Features Grid */
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(460px, 1fr));
-      gap: 16px;
-      margin: 32px 0;
+      grid-template-columns: repeat(2, minmax(520px, 1fr));
+      gap: 24px;
+      margin: 32px auto;
+      width: min(100%, 1600px);
       text-align: left;
       justify-items: stretch;
-    }
-
-    .feature-card:nth-child(5) {
-      grid-column: 1 / -1;
-      max-width: 640px;
-      justify-self: center;
-      width: 100%;
     }
 
     .feature-card {
       position: relative;
       border-radius: 40px;
       padding: 0;
-      overflow: hidden;
       transition: transform 0.4s ease, box-shadow 0.4s ease;
       cursor: pointer;
       height: 320px;
       box-shadow: 
         0 12px 24px rgba(0, 0, 0, 0.25), 
-        0 6px 12px rgba(0, 0, 0, 0.15),
-        inset 0 0 0 4px rgba(255, 255, 255, 0.9);
+        0 6px 12px rgba(0, 0, 0, 0.15);
       pointer-events: auto;
       will-change: transform, box-shadow;
       backface-visibility: hidden;
       -webkit-font-smoothing: subpixel-antialiased;
+      box-sizing: border-box;
+      overflow: hidden;
+      border: 2px solid #5ed6c8;
     }
 
     .feature-card:hover {
       transform: translateY(-12px);
       box-shadow: 
         0 28px 56px rgba(0, 0, 0, 0.4), 
-        0 8px 16px rgba(0, 0, 0, 0.2),
-        inset 0 0 0 4px rgba(255, 255, 255, 0.6);
+        0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
     .art-background {
@@ -679,6 +740,7 @@ import { Ripple } from './models/ripple.model';
       inset: 0;
       overflow: hidden;
       z-index: 1;
+      border-radius: 40px;
     }
 
     .art-illustration {
@@ -783,16 +845,15 @@ import { Ripple } from './models/ripple.model';
       letter-spacing: 1.2px;
       margin-top: 12px;
       align-self: flex-start;
-      border: 3px solid rgba(255, 255, 255, 0.4);
+      border: none;
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.3);
-      transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
       color: white;
       font-style: italic;
     }
 
     .feature-card:hover .card-badge {
       background: rgba(255, 255, 255, 0.4);
-      border-color: rgba(255, 255, 255, 0.6);
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.4);
     }
 
@@ -813,8 +874,8 @@ import { Ripple } from './models/ripple.model';
       background: linear-gradient(135deg, #3aa17e 0%, #78c27d 100%);
     }
 
-    .card-ai {
-      background: linear-gradient(135deg, #f4c95d 0%, #e6a03c 100%);
+    .card-stats {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     }
 
     .card-protection {
@@ -852,12 +913,33 @@ import { Ripple } from './models/ripple.model';
     .cta-button.secondary {
       background: rgba(255, 255, 255, 0.2);
       color: white;
-      border: 2px solid rgba(255, 255, 255, 0.4);
+      border: none;
     }
 
     .cta-button.secondary:hover {
       background: rgba(255, 255, 255, 0.3);
       transform: translateY(-2px);
+    }
+
+    .info-text {
+      position: relative;
+      z-index: 8;
+      width: 100%;
+      max-width: 1200px;
+      margin: 10px auto 60px;
+      padding: 0 24px;
+      text-align: center;
+      clear: both;
+    }
+
+    .info-text p {
+      font-size: 1.35rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.98);
+      font-weight: 600;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+      margin: 0;
+      letter-spacing: 0.3px;
     }
 
     /* Bottom Bar */
@@ -866,7 +948,7 @@ import { Ripple } from './models/ripple.model';
       z-index: 8;
       padding: 26px 0 32px;
       background: rgba(255, 255, 255, 0.12);
-      border-top: 4px solid rgba(255, 255, 255, 0.9);
+      border-top: 3px solid rgba(255, 255, 255, 0.3);
       backdrop-filter: blur(14px);
       box-shadow: 0 -14px 28px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.45);
       overflow: hidden;
@@ -1082,7 +1164,7 @@ import { Ripple } from './models/ripple.model';
       padding: 14px 24px 0;
       position: relative;
       z-index: 2;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      border-top: none;
     }
 
     .bottom-meta a {
